@@ -24,16 +24,36 @@ An instance represents charging demands and it was generated as described [below
 
 
 ## Instances generation
+We consider two types of instances: `small instances` and `hard instances`. The first type of instances represent typical scenarios, whereas the second types of instances represent more extreme situations.
+
+### Small instances
 We consider five groups of instances, where the number of charging demands $n$ in groups 1, 2, 3, 4, and 5 is equal to 10, 20, 40, 50, and 100, respectively, and for each group, we generate ten different random instances as follows.
 - The arrival times of vehicles are generated from the uniform distribution in the interval  $[0, 0.2 n]$ (in hours). This means that the time horizon length depends on the number of vehicles $n$.  
  - The required energy are generated from the uniform distribution $[5.5, 66]$ (in kWh).
-- To generate the departure times of vehicles, we  calculate, for each vehicle $j, j \in \mathcal{J}$, the charging times $p_{1j}$,  assuming that it can be charged with type 1 chargers as $p_{1j} = \frac{e_j}{11}$. Then, the departure time of each vehicle $j$ is calculated as $d_j = r_j  + (1+ \alpha) p_{1j} $ where $\alpha$ is randomly chosen according to the value $p_{1j}$ as \textcolor{blue}{in Table \ref{tab:alpha_values}.}
-       
-\end{itemize}
+- To generate the departure times of vehicles, we  calculate, for each vehicle $j, j \in \mathcal{J}$, the charging times $p_{1j}$,  assuming that it can be charged with type 1 chargers as $p_{1j} = \frac{e_j}{11}$. Then, the departure time of each vehicle $j$ is calculated as $d_j = r_j  + (1+ \alpha) p_{1j}$ where $\alpha$ is randomly chosen according to the value $p_{1j}$ as:
+
+|$p_{1j}$ (hours) |  $\alpha$ |
+|:----:|:-----------------------|
+| $[0.5, 1)$ | $[0.1, 1]$ |
+|$[1, 2)$ | $[0.1, 0.9]$ |
+| $[2,3)$ | $[0.1, 0.8]$ |
+| $[3,4)$ | $[0.1, 0.7]$ |
+| $[4,5)$ |  $[0.1, 0.6]$ |
+| $[5,6)$ | $[0.1, 0.5]$|
+
  
 
 ## Hard instances
-`hard_instances` folder contains 60 instances 
+`hard_instances` folder contains 60 instances grouped into 6 groups.  
+
+|instances group | instances number | $n$ | $\alpha =0.1 p_{1j}$  | $\alpha =0.2 p_{1j}$ |
+|:--------------:|:----------------:|:---:|:---------------------:|:---------------------|
+|1 | 1 to 10 | 100 | 50% | 50% |
+|2 | 11 to 20 | 200 | 50% | 50% |
+|3 | 21 to 30 | 400 | 50% | 50% |
+|4 | 31 to 40 | 100 | 75% | 25% |
+|5 | 41 to 50 | 200 | 75% | 25% |
+|6 | 51 to 60 | 400 | 75% | 25% |
 
 
 ## License
