@@ -44,7 +44,7 @@ We consider five groups of instances, where the number of charging demands $n$ i
  
 
 ## Hard instances
-`hard_instances` folder contains 60 instances grouped into 6 groups.  
+`hard_instances` folder contains 60 instances grouped into 6 groups. The number of charging demands $n$ in groups 1 and 4 is equal to 100, it is equal to 200 for groups 2 and 5, and it is equal to 200 for groups 3 and 6. For each group, we generate 10 different random instances as in type 1 instances, except for $\alpha$ values. For groups 1, 2, and 3 for half of the vehicles, $\alpha$ is fixed to $0.1$, and for the other half, it is fixed to $0.2$. For groups 4, 5, and 6 for $75$\% of vehicles, $\alpha$ is fixed to $0.1$, and for the other half, it is fixed to $0.2$. A summary of those values are shown below:
 
 |instances group | instances number | $n$ | $\alpha =0.1 p_{1j}$  | $\alpha =0.2 p_{1j}$ |
 |:--------------:|:----------------:|:---:|:---------------------:|:---------------------|
