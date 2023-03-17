@@ -1,4 +1,3 @@
-# EVCSP_PCP_Instances
 # EVCSP_RA_instances
 This repository contains the instances used for electric vehicle charging scheduling problem presented at paper "Minimizing grid capacity in preemptive electric vehicle charging orchestration: complexity, exact and heuristic approaches".
 
